@@ -56,7 +56,7 @@ public class ImprovedAudioManager : MonoBehaviour
         // Loads the value for the SFX volume
         if (!PlayerPrefs.HasKey("SFXMixer"))
         {
-            PlayerPrefs.SetFloat("SFXMixer", 10f);
+            PlayerPrefs.SetFloat("SFXMixer", 5f);
             LoadSFX();
         }
         else
@@ -67,7 +67,7 @@ public class ImprovedAudioManager : MonoBehaviour
         // Loads the value for the music volume
         if (!PlayerPrefs.HasKey("MusicMixer"))
         {
-            PlayerPrefs.SetFloat("MusicMixer", 10f);
+            PlayerPrefs.SetFloat("MusicMixer", 5f);
             LoadMusic();
         }
         else
@@ -173,13 +173,13 @@ public class ImprovedAudioManager : MonoBehaviour
     {
         _MusicVolume = PlayerPrefs.GetFloat("MusicMixer");
         sliderValueMusic.value = _MusicVolume;
-        SetSFXVolume(_MusicVolume);
+        SetMusicVolume(_MusicVolume);
     }
 
     // Saves the current music volume
     public void SaveMusic()
     {
-        PlayerPrefs.SetFloat("SFXMixer", sliderValueSFX.value);
+        PlayerPrefs.SetFloat("MusicMixer", sliderValueMusic.value);
     }
 
 }

@@ -8,10 +8,10 @@ public class Sound
 
     public AudioClip clip;
 
-    [Range(0f, 100f)]
+    [Range(0f, 20f)]
     public float musicVolume;
 
-    [Range(0f, 100f)]
+    [Range(0f, 20f)]
     public float sFXVolume;
 
     //[Range(1f, 1000f)]
