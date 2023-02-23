@@ -65,7 +65,7 @@ public class StartSceneKeyNavScript : MonoBehaviour
         if (currentMenu == startMenu)
         {
             // Options key
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 startMenu.SetActive(false);
                 optionsMenu.SetActive(true);
@@ -73,7 +73,7 @@ public class StartSceneKeyNavScript : MonoBehaviour
             }
 
             // Play key
-            if (Input.GetKeyUp(KeyCode.RightArrow))
+            if (Input.GetKeyUp(KeyCode.P))
             {
                     startMenu.SetActive(false);
                     istructionsScreen.SetActive(true);
@@ -81,7 +81,7 @@ public class StartSceneKeyNavScript : MonoBehaviour
             }
 
             // Quit key
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 startMenu.SetActive(false);
                 quitMenu.SetActive(true);

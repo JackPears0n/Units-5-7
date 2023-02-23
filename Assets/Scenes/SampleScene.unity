@@ -687,12 +687,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Left click the signs to use them, or press one of these keys:
 
-    Up
-    arrow = options
+    O =
+    options
 
-    Right arrow = play
+    P = play
 
-    Left arrow= exit'
+    E = exit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
