@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonsScript : MonoBehaviour
 {
     //private StartSceneKeyNavScript ssknv;
+    private ImprovedAudioManager am;
     public GameObject nextMenu;
 
     void Start()
@@ -24,4 +25,17 @@ public class ButtonsScript : MonoBehaviour
         ssknv.ChangeCurrentMenu(nextMenu);
     }
     */
+
+    public void SetDiffEasy()
+    {
+        PlayerPrefs.SetString("Difficulty", "Easy");
+    }
+    public void SetDiffMid()
+    {
+        PlayerPrefs.SetString("Difficulty", "Medium");
+    }
+    public void SetDiffHard()
+    {
+        PlayerPrefs.SetString("Difficulty", "Hard");
+    }
 }

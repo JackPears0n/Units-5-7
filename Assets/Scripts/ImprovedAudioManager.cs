@@ -27,6 +27,9 @@ public class ImprovedAudioManager : MonoBehaviour
     public AudioMixer musicAudioMixer;
     public AudioMixer masterMixer;
 
+    // Bool to check if audio mixers should be on mute
+    [SerializeField] private bool isToggled;
+
     // Variables to store the current music volume
     float _SFXVol;
     float _MusicVolume;
@@ -180,6 +183,34 @@ public class ImprovedAudioManager : MonoBehaviour
     public void SaveMusic()
     {
         PlayerPrefs.SetFloat("MusicMixer", sliderValueMusic.value);
+    }
+
+    //-----------
+    // Music audio
+    //-----------
+    // Set all audio mixers to be mute / unmute
+    public void ToggleAudio()
+    {
+        isToggled = !isToggled;
+
+        if (isToggled)
+        {
+            SetMusicVolume(-80f);
+
+            SetSFXVolume(-80f);
+
+            isToggled = false;
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("MusicMixer", 2f);
+            LoadMusic();
+
+            PlayerPrefs.SetFloat("SFXMixer", 5f);
+            LoadSFX();
+
+            isToggled = true;
+        }
     }
 
 }
