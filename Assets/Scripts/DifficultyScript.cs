@@ -28,6 +28,6 @@ public class DifficultyScript : MonoBehaviour
 
     private void Start()
     {
-        diffChange.text = PlayerPrefs.GetString("Difficulty").ToString();
+        //diffChange.text = PlayerPrefs.GetString("Difficulty").ToString();
     }
 }

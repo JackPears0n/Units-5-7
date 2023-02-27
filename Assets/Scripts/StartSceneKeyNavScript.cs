@@ -8,9 +8,9 @@ public class StartSceneKeyNavScript : MonoBehaviour
 {
     public GameObject currentMenu;
 
-    bool audioToggledOff;
-    float sfxVol;
-    float musicVol;
+    //bool audioToggledOff;
+    //float sfxVol;
+    //float musicVol;
 
     [Header("Menus")]
     public GameObject startScreen;
@@ -32,7 +32,7 @@ public class StartSceneKeyNavScript : MonoBehaviour
     void Start()
     {
         currentMenu = startScreen;
-        audioToggledOff = false;
+        //audioToggledOff = false;
 
         sss = GetComponent<SceneShiftScript>();
         am = GetComponent<ImprovedAudioManager>();
@@ -75,9 +75,9 @@ public class StartSceneKeyNavScript : MonoBehaviour
             // Play key
             if (Input.GetKeyUp(KeyCode.P))
             {
-                    startMenu.SetActive(false);
-                    istructionsScreen.SetActive(true);
-                    currentMenu = istructionsScreen;
+                startMenu.SetActive(false);
+                istructionsScreen.SetActive(true);
+                currentMenu = istructionsScreen;
             }
 
             // Quit key
@@ -158,11 +158,6 @@ public class StartSceneKeyNavScript : MonoBehaviour
             }
             */
 
-            // Plays a special effect for testing
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                am.PlaySFX("Sword drawn");
-            }
 
             // Goes to start menu
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -185,6 +180,7 @@ public class StartSceneKeyNavScript : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Y))
             {
+
                 Application.Quit();
                 UnityEditor.EditorApplication.isPlaying = false;
             }
