@@ -191,7 +191,6 @@ public class ImprovedAudioManager : MonoBehaviour
     // Set all audio mixers to be mute / unmute
     public void ToggleAudio()
     {
-        isToggled = !isToggled;
 
         if (isToggled)
         {
